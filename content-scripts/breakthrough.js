@@ -1,0 +1,3 @@
+function logFreely(){	
+	$('form').submit();
+}

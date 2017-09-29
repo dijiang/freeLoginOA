@@ -1,0 +1,31 @@
+{
+	/*
+		author: liyf
+		email : 1195878682@qq,com
+	*/
+
+	//插件基本信息
+	"name": "Free Login OA",
+	"description": "no limit to login OA",
+	"version": "1.0",
+	
+	//popup弹出窗设置
+	"browser_action": {
+		"default_icon": "images/icon.jpg",
+		"default_title": "Free Login OA",
+		"default_popup": "popup.html"
+	},
+
+	//content scripts注入
+	"content_scripts": [{
+      "matches": ["http://*/*","https://*/*","http://172.30.44.181/login/Login.jsp?logintype=1"],
+      "js": ["jquery-3.2.1.min.js","content-scripts/breakthrough.js"]
+    }],
+	
+	//权限设置
+	"permissions": [
+		"activeTab"
+	],
+	
+	"manifest_version": 2
+}
